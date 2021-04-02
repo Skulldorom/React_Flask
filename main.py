@@ -27,7 +27,7 @@ def special():
     }),202
 
 
-@main.route('/db/create')
+@main.route('/db/create', methods=['GET'])
 def create_db():
     from models import create_db
     create_db()
