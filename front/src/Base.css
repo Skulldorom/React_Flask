@@ -1,0 +1,134 @@
+:root{
+	--main-purple: #6112a1;
+	--main-blue: #209cee;
+}
+
+#root{
+    padding-top: 3.25rem;
+    background-color:var(--main-purple);
+}
+
+.hero-body{
+    height:calc(100% - 3.25rem);
+}
+
+.is-main{
+    background-color:var(--main-purple);
+    color: #fff;
+}
+
+.hero.is-main .title {
+    color: #fff;
+}
+
+.hero.is-main .subtitle {
+    color: #fff;
+}
+
+.hero.is-main .navbar-item, .hero.is-main .navbar-link {
+    color: #fff;
+}
+
+.hero.is-main a.navbar-item.is-active{
+    background-color:var(--main-blue);
+    color: #fff;
+}
+
+.hero.is-main a.navbar-item:hover{
+    background-color:var(--main-blue);
+    color: #fff;
+}
+
+.button.is-main.is-inverted {
+    background-color: #fff;
+    color: var(--main-purple);
+}
+
+.button.is-main{
+    background-color:var(--main-purple);
+    color: #fff;
+}
+
+.hero.is-main .tabs a {
+    color: #fff;
+}
+
+.hero.is-main .tabs .is-active a {
+    color:var(--main-blue);
+    opacity: .9;
+}
+
+.hero.is-main .hero-foot{
+    background-color:rgba(36, 36, 36, 0.623);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.hero.is-main .navbar-burger {
+    color: #ffffff;
+}
+
+.hero.is-main #navbarMenuHeroA{
+    background-color:var(--main-purple);
+    color: #fff;
+}
+
+.crop {
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: .75rem;
+}
+
+.crop img {
+    margin-top: -150px;
+    margin-bottom: -170px;
+}
+
+.loading {
+    position: relative;
+  }
+  
+  .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 35vh);
+  }
+
+div.fullscreen{
+    background-color:rgb(27, 0, 70);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.hero.is-main .navbar.is-fixed-top{
+    background-color:var(--main-purple);
+    border-bottom: 1px solid rgba(36, 36, 36, 0.623);
+}
+
+.columns.is-main{
+    height: -webkit-fill-available;
+    width: 100%;
+}
+
+.is-sidebar{
+    background-color:rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+}
+
+.menu-list a{
+    color: #fff;
+    border-radius: 24px;
+    margin-bottom: 10px;
+}
+
+.menue.is-fixed{
+    position:fixed;
+    width: 17%;
+}
+
+.menu-list a:hover {
+    background-color: rgba(0, 0, 0, 0.411);
+    color: var(--main-blue);
+}
