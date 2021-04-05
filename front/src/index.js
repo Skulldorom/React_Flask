@@ -4,10 +4,10 @@ import Base from './Base';
 import '../node_modules/bulma/css/bulma.min.css';
 import './Base.css';
 
+var debug = false;
+
 if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
-    var debug = true;
-else
-    var debug = false;
+    debug = true;
   
 const backend = debug ?'http://localhost:5000' : '';
 
