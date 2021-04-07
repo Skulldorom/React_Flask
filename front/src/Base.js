@@ -116,19 +116,21 @@ class Base extends Component {
           });
       }
 
-    loggedin = () => {
+      loggedin = () => {
         this.setState({token:localStorage.getItem("access_token")});
         setTimeout(() => {
             const url = `auth/loggedin`
-            const data = {token:this.state.token}    
-            axios.post(`${backend}/`+url,data)
-            // axios.get(url)     
+            const data = {token:this.state.token}     
+            axios.post(`${backend}/`+url,data)  
             .then((res) => {            
                 this.setState({loggedin: res.data.value});
                 this.setState({name:res.data.name});
             })
             .catch((err) => {
-            console.log(err);
+                console.log(err);
+                this.setState({logerror: true});
+                localStorage.setItem('access_token', null);
+                window.location.replace("/login")
             });
           }, 100);
     }
@@ -142,7 +144,18 @@ class Base extends Component {
         window.location.replace("/")
     }
 
+    setactive(){
+        const data = window.location.pathname.substring(1);
+        var x = ""
+        x = data.charAt(0).toUpperCase() + data.slice(1);
+        if (data==="")
+            x = "Home"
+        
+        this.addActiveClass(x)
+    }
+
     componentDidMount() {
+        this.setactive()
         if (localStorage.getItem("access_token")!== 'null')
             this.loggedin();
     }     

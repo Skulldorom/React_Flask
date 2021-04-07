@@ -57,7 +57,7 @@ def login():
     email = post_data['email'].lower()
     password = post_data['password']
 
-    status,access_token = login_account(email,password)        
+    status,access_token = login_account(email,password,False)        
     if status:
         response_object = {
             'status': 'success',
